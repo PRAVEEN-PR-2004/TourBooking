@@ -48,6 +48,7 @@ public class CustomerDAO {
             int rowsInserted = pstmt.executeUpdate(); // ✅ Use executeUpdate() for INSERT
             if (rowsInserted > 0) {
                 System.out.println("Customer created successfully!");
+
             }
         } catch (SQLException e) {
             System.out.println("Error inserting customer: " + e.getMessage()); // ✅ Print the actual error

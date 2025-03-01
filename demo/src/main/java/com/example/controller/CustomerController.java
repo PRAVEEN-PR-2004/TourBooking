@@ -7,13 +7,12 @@ public class CustomerController {
 
     private CustomerDAO customerDAO = new CustomerDAO();
 
-    public void loginCustomer(String number, String password) {
+    public boolean loginCustomer(String number, String password) {
         Customer customer = customerDAO.validateCustomer(number, password);
         if (customer != null) {
-            System.out.println("Login successful! Welcome, " + customer.getCustomerName());
-        } else {
-            System.out.println("Invalid credentials. Please try again.");
-        }
+            return true;
+        } else
+            return false;
     }
 
     public void signupCustomer(String name, String number, String password) {

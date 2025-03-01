@@ -21,19 +21,28 @@ public class CustomerView {
                 String number = sc.nextLine();
                 System.out.print("Enter your password: ");
                 String password = sc.nextLine();
-                controller.loginCustomer(number, password);
+                if (controller.loginCustomer(number, password)) {
+
+                } else {
+                    System.out.println("LOGIN FAILED");
+                }
+
                 break;
             case 2:
                 System.out.print("Enter you name: ");
-                String name1 = sc.nextLine();
+                String name1 = sc.next();
+                sc.nextLine();
                 System.out.print("Enter your number: ");
-                String number1 = sc.nextLine();
+                String number1 = sc.next();
+                sc.nextLine();
                 System.out.print("Enter your password: ");
-                String password1 = sc.nextLine();
+                String password1 = sc.next();
                 controller.signupCustomer(name1, number1, password1);
+                customerInterface();
                 break;
             default:
                 System.out.println("Invalid choice. Please try again.");
         }
     }
+
 }
