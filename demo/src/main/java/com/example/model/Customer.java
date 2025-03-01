@@ -31,16 +31,4 @@ public class Customer {
         return customerPassword;
     }
 
-    // // Setters (optional, if modification is needed)
-    // public void setCustomerName(String customerName) {
-    // this.customerName = customerName;
-    // }
-
-    // public void setCustomerNumber(String customerNumber) {
-    // this.customerNumber = customerNumber;
-    // }
-
-    // public void setCustomerPassword(String customerPassword) {
-    // this.customerPassword = customerPassword;
-    // }
 }
