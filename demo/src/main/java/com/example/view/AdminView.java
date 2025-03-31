@@ -59,18 +59,17 @@ public class AdminView {
 
                 case 2:
                     // **DISPLAY ALL TOURS**
-                    // List<Tour> tours = tourController.getTours();
-                    // if (tours.isEmpty()) {
-                    // System.out.println("No tours available.");
-                    // } else {
-                    // System.out.println("\n------ TOUR LIST ------");
-                    // for (Tour tour : tours) {
-                    // System.out.println("ID: " + tour.getTourId() +
-                    // " | Name: " + tour.getTourType() +
-                    // " | Location: " + tour.getLocation() +
-                    // " | Price: $" + tour.getPrice());
-                    // }
-                    // }
+                    List<Tour> t = tourController.getTours();
+                    if (t.isEmpty()) {
+                        System.out.println("No tours available.");
+                    } else {
+                        System.out.println("\n------ TOUR LIST ------");
+                        for (Tour tour : t) {
+                            System.out.println("ID: " + tour.getTourId() +
+                                    " | Location: " + tour.getLocation() +
+                                    " | Price: $" + tour.getPrice());
+                        }
+                    }
                     break;
 
                 case 3:
